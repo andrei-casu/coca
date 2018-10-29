@@ -4,6 +4,10 @@ $default-margin: 10px;
 $bck-color: #adb5bd;
 
 
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 .my-body{
     background-color: #fff;
     border: 1px solid blue;
@@ -51,7 +55,6 @@ $bck-color: #adb5bd;
     text-align: justify;
 }
 
-
 .container {
     margin-right: auto;
     margin-left: auto;
@@ -73,31 +76,31 @@ $bck-color: #adb5bd;
     padding-left: 15px;
 }
 .col-9{
-    max-width: calc(75% - 30px);
+    max-width:75%;
     flex: 0 0 75%;
 }
 .col-8{
-    max-width: calc(66.66666667% - 30px);
+    max-width: 66.66666667%;
     flex: 0 0 66.66666667%;
 }
 .col-7{
-    max-width: calc(58.33333333% - 30px);
+    max-width: 58.33333333%;
     flex: 0 0 58.33333333%;
 }
 .col-6{
-    max-width: calc(50% - 30px);
+    max-width: 50%;
     flex: 0 0 50%;
 }
 .col-5{
-    max-width:  calc(41.666666667% - 30px);
+    max-width: 41.666666667%;
     flex: 0 0 41.666666667%;
 }
 .col-4 {
-    max-width:  calc(33.33333333% - 30px);
+    max-width: 33.33333333%;
     flex: 0 0 33.33333333%;
 }
 .col-3{
-    max-width: calc(25% - 30px);
+    max-width: 25%;
     flex: 0 0 25%;
 }
 
