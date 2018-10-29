@@ -1,6 +1,15 @@
 
 $default-padding: 10px;
 $default-margin: 10px;
+$bck-color: #adb5bd;
+
+
+.my-body{
+    background-color: #fff;
+    border: 1px solid blue;
+    top: 13%;
+    left: 25%;
+}
 
 .p-relative{
     position: relative;
@@ -22,6 +31,26 @@ $default-margin: 10px;
     display: flex;
 }
 
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+}
+
 
 .container {
     margin-right: auto;
@@ -30,92 +59,75 @@ $default-margin: 10px;
     padding-left: 15px;
     width: 100%;
 }
-
 .row{
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
-
-.col-9{
-    width: 75%;
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
     position: relative;
+    width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+}
+.col-9{
+    max-width: calc(75% - 30px);
+    flex: 0 0 75%;
 }
 .col-8{
-    width: 66.66666667%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: calc(66.66666667% - 30px);
+    flex: 0 0 66.66666667%;
 }
 .col-7{
-    width: 58.33333333%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: calc(58.33333333% - 30px);
+    flex: 0 0 58.33333333%;
 }
 .col-6{
-    width: 50%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: calc(50% - 30px);
+    flex: 0 0 50%;
 }
 .col-5{
-    width: 41.666666667%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width:  calc(41.666666667% - 30px);
+    flex: 0 0 41.666666667%;
 }
 .col-4 {
-    width: 33.33333333%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width:  calc(33.33333333% - 30px);
+    flex: 0 0 33.33333333%;
 }
 .col-3{
-    width: 25%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: calc(25% - 30px);
+    flex: 0 0 25%;
 }
 
 .d-inline-block{
     display: inline-block;
 }
 
-.w25{
+.w-25{
    width: 25%; 
 }
-.w50{
+.w-50{
     width: 50%;
 }
-.w75{
+.w-75{
     width: 75%;
 }
-.w100{
+.w-100{
     width: 100%;
 }
 
-
-.h25{
+.h-25{
     height: 25%; 
  }
-.h50{
+.h-50{
     height: 50%;
  }
-.h75{
+.h-75{
     height: 75%;
  }
-.h100{
+.h-100{
     height: 100%;
  }
 
@@ -162,3 +174,4 @@ $default-margin: 10px;
 .m0{
     margin: 0;
 }
+
