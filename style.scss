@@ -1,180 +1,100 @@
 
-$default-padding: 10px;
-$default-margin: 10px;
-$bck-color: #adb5bd;
 
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
 
 .my-body{
     background-color: #fff;
-    border: 1px solid blue;
     top: 13%;
     left: 25%;
-}
+    font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
 
-.p-relative{
-    position: relative;
-}
-.p-absolute{
-    position: absolute;
-}
+    header{
+        .header-right{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
 
-.d-none{
-    display: none;
-}
-.d-block{
-    display: block;
-}
-.d-grid{
-    display: grid;
-}   
-.d-flex{
-    display: flex;
-}
+    section{
+        .about-date{
+            background-color: lightgrey;
+        }
 
-.float-left{
-    float: left;
-}
-.float-right{
-    float: right;
-}
+        .calendar{
+            .calendar-days-of-week{
+                display: grid;
+                div{
+                    font-size: 14px;
+                }
+                #Mon{
+                    grid-row: 1/2; 
+                    grid-column: 1/2; 
+                }
+                #Tue{
+                    grid-row: 1/2; 
+                    grid-column: 2/3; 
+                }
+                #Wed{
+                    grid-row: 1/2; 
+                    grid-column: 3/4; 
+                }
+                #Thu{
+                    grid-row: 1/2; 
+                    grid-column: 4/5; 
+                }
+                #Fri{
+                    grid-row: 1/2; 
+                    grid-column: 5/6; 
+                }
+                #Sat{
+                    grid-row: 1/2; 
+                    grid-column: 6/7; 
+                }
+                #Sun{
+                    grid-row: 1/2; 
+                    grid-column: 7/8; 
+                }
+            }
 
-.text-center{
-    text-align: center;
-}
-.text-left{
-    text-align: left;
-}
-.text-right{
-    text-align: right;
-}
-.text-justify{
-    text-align: justify;
-}
+            .calendar-days{
+                display: grid;
 
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    width: 100%;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.col-9{
-    max-width:75%;
-    flex: 0 0 75%;
-}
-.col-8{
-    max-width: 66.66666667%;
-    flex: 0 0 66.66666667%;
-}
-.col-7{
-    max-width: 58.33333333%;
-    flex: 0 0 58.33333333%;
-}
-.col-6{
-    max-width: 50%;
-    flex: 0 0 50%;
-}
-.col-5{
-    max-width: 41.666666667%;
-    flex: 0 0 41.666666667%;
-}
-.col-4 {
-    max-width: 33.33333333%;
-    flex: 0 0 33.33333333%;
-}
-.col-3{
-    max-width: 25%;
-    flex: 0 0 25%;
-}
+                div{
+                    cursor: pointer;
+                    padding: 1rem;
+                    font-size: 22px;
+                    
+                }
 
-.d-inline-block{
-    display: inline-block;
+                #calendar-item-1{
+                    grid-row: 1/2; 
+                    grid-column: 1/2; 
+                }
+                #calendar-item-2{
+                    grid-row: 1/2; 
+                    grid-column: 2/3; 
+                }
+                #calendar-item-3{
+                    grid-row: 1/2; 
+                    grid-column: 3/4; 
+                }
+                #calendar-item-4{
+                    grid-row: 1/2; 
+                    grid-column: 4/5; 
+                }
+                #calendar-item-5{
+                    grid-row: 1/2; 
+                    grid-column: 5/6; 
+                }
+                #calendar-item-6{
+                    grid-row: 1/2; 
+                    grid-column: 6/7; 
+                }
+                #calendar-item-7{
+                    grid-row: 1/2; 
+                    grid-column: 7/8; 
+                }
+            }
+        }
+            
+    }
 }
-
-.w-25{
-   width: 25%; 
-}
-.w-50{
-    width: 50%;
-}
-.w-75{
-    width: 75%;
-}
-.w-100{
-    width: 100%;
-}
-
-.h-25{
-    height: 25%; 
- }
-.h-50{
-    height: 50%;
- }
-.h-75{
-    height: 75%;
- }
-.h-100{
-    height: 100%;
- }
-
-.pt{
-    padding-top: $default-padding;
-}
-.pb{
-    padding-bottom: $default-padding;
-}
-.pl{
-    padding-left: $default-padding;
-}
-.pr{
-    padding-right: $default-padding;
-}
-.px{
-    padding: 0 $default-padding;
-}
-.py{
-    padding: $default-padding 0;
-}
-.p0{    
-    padding: 0;
-}
-
-.mt{
-    margin-top: $default-margin;
-}
-.mb{
-    margin-bottom: $default-margin;
-}
-.ml{
-    margin-left: $default-margin;
-}
-.mr{
-    margin-right: $default-margin;
-}
-.mx{
-    margin: 0 $default-margin;
-}
-.my{
-    margin: $default-margin 0;
-}
-.m0{
-    margin: 0;
-}
-

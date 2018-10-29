@@ -1,0 +1,183 @@
+
+$default-padding: 10px;
+$default-margin: 10px;
+$bck-color: #adb5bd;
+
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bck-color;
+}
+
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+.d-grid{
+    display: grid;
+}   
+.d-flex{
+    display: flex;
+}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-justify{
+    text-align: justify;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-9{
+    max-width:75%;
+    flex: 0 0 75%;
+}
+.col-8{
+    max-width: 66.66666667%;
+    flex: 0 0 66.66666667%;
+}
+.col-7{
+    max-width: 58.33333333%;
+    flex: 0 0 58.33333333%;
+}
+.col-6{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.col-5{
+    max-width: 41.666666667%;
+    flex: 0 0 41.666666667%;
+}
+.col-4 {
+    max-width: 33.33333333%;
+    flex: 0 0 33.33333333%;
+}
+.col-3{
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.w-25{
+   width: 25%; 
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+
+.h-25{
+    height: 25%; 
+ }
+.h-50{
+    height: 50%;
+ }
+.h-75{
+    height: 75%;
+ }
+.h-100{
+    height: 100%;
+ }
+
+.pt{
+    padding-top: $default-padding;
+}
+.pb{
+    padding-bottom: $default-padding;
+}
+.pl{
+    padding-left: $default-padding;
+}
+.pr{
+    padding-right: $default-padding;
+}
+.px{
+    padding: 0 $default-padding;
+}
+.py{
+    padding: $default-padding 0;
+}
+.p{
+    padding: $default-padding;
+}
+.p0{    
+    padding: 0;
+}
+
+.mt{
+    margin-top: $default-margin;
+}
+.mb{
+    margin-bottom: $default-margin;
+}
+.ml{
+    margin-left: $default-margin;
+}
+.mr{
+    margin-right: $default-margin;
+}
+.mx{
+    margin: 0 $default-margin;
+}
+.my{
+    margin: $default-margin 0;
+}
+.m{
+    margin: $default-margin;
+}
+.m0{
+    margin: 0;
+}
+

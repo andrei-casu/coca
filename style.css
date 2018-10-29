@@ -1,230 +1,166 @@
-*, ::after, ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .my-body {
   background-color: #fff;
-  border: 1px solid blue;
   top: 13%;
   left: 25%;
+  font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
 }
 
-.p-relative {
-  position: relative;
+.my-body header .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.p-absolute {
-  position: absolute;
+.my-body section .about-date {
+  background-color: lightgrey;
 }
 
-.d-none {
-  display: none;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-grid {
+.my-body section .calendar .calendar-days-of-week {
   display: -ms-grid;
   display: grid;
 }
 
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.my-body section .calendar .calendar-days-of-week div {
+  font-size: 14px;
 }
 
-.float-left {
-  float: left;
+.my-body section .calendar .calendar-days-of-week #Mon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
 }
 
-.float-right {
-  float: right;
+.my-body section .calendar .calendar-days-of-week #Tue {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
 }
 
-.text-center {
-  text-align: center;
+.my-body section .calendar .calendar-days-of-week #Wed {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
 }
 
-.text-left {
-  text-align: left;
+.my-body section .calendar .calendar-days-of-week #Thu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
 }
 
-.text-right {
-  text-align: right;
+.my-body section .calendar .calendar-days-of-week #Fri {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
 }
 
-.text-justify {
-  text-align: justify;
+.my-body section .calendar .calendar-days-of-week #Sat {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
 }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
+.my-body section .calendar .calendar-days-of-week #Sun {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7/8;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+.my-body section .calendar .calendar-days {
+  display: -ms-grid;
+  display: grid;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+.my-body section .calendar .calendar-days div {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 22px;
 }
 
-.col-9 {
-  max-width: 75%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+.my-body section .calendar .calendar-days #calendar-item-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
 }
 
-.col-8 {
-  max-width: 66.66666667%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.66666667%;
-          flex: 0 0 66.66666667%;
+.my-body section .calendar .calendar-days #calendar-item-2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
 }
 
-.col-7 {
-  max-width: 58.33333333%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 58.33333333%;
-          flex: 0 0 58.33333333%;
+.my-body section .calendar .calendar-days #calendar-item-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
 }
 
-.col-6 {
-  max-width: 50%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+.my-body section .calendar .calendar-days #calendar-item-4 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
 }
 
-.col-5 {
-  max-width: 41.666666667%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 41.666666667%;
-          flex: 0 0 41.666666667%;
+.my-body section .calendar .calendar-days #calendar-item-5 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
 }
 
-.col-4 {
-  max-width: 33.33333333%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33333333%;
-          flex: 0 0 33.33333333%;
+.my-body section .calendar .calendar-days #calendar-item-6 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
 }
 
-.col-3 {
-  max-width: 25%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-}
-
-.d-inline-block {
-  display: inline-block;
-}
-
-.w-25 {
-  width: 25%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-75 {
-  width: 75%;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.h-25 {
-  height: 25%;
-}
-
-.h-50 {
-  height: 50%;
-}
-
-.h-75 {
-  height: 75%;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-.pt {
-  padding-top: 10px;
-}
-
-.pb {
-  padding-bottom: 10px;
-}
-
-.pl {
-  padding-left: 10px;
-}
-
-.pr {
-  padding-right: 10px;
-}
-
-.px {
-  padding: 0 10px;
-}
-
-.py {
-  padding: 10px 0;
-}
-
-.p0 {
-  padding: 0;
-}
-
-.mt {
-  margin-top: 10px;
-}
-
-.mb {
-  margin-bottom: 10px;
-}
-
-.ml {
-  margin-left: 10px;
-}
-
-.mr {
-  margin-right: 10px;
-}
-
-.mx {
-  margin: 0 10px;
-}
-
-.my {
-  margin: 10px 0;
-}
-
-.m0 {
-  margin: 0;
+.my-body section .calendar .calendar-days #calendar-item-7 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
+  grid-column: 7/8;
 }
 /*# sourceMappingURL=style.css.map */
