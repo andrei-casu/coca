@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="general.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script type="text/javascript" src="./index.js"></script>
     <title>Coca Calendar</title>
 </head>
-<body >
-    <div class="my-body container p-absolute w-50 h-75">
+
+<body>
+    <div class="my-body container p-absolute w-50">
         <header class="row py">
-            <div class="col-4 header-left">
-                <button>Preferinte</button>
-                <button>Export</button>       
-                <button>Import</button>  
+            <div class="col-4 p0 header-left">
+                <button>Preferences</button>
+                <button>Export</button>
+                <button>Import</button>
             </div>
-            <div class="col-8 header-right">
+            <div class="col-8 p0 header-right">
+                <div class="current-date"> Friday, 2 November, 2018 </div>
                 <button>Month</button>
-                <button>Year</button>        
+                <button>Year</button>
             </div>
         </header>
-        <section class="row py">
+        <section class="row">
             <div class="col-4 about-date">
-                Monday, Octomber 29, 2018
+                <h4>Friday, 2 November, 2018</h4>
+                <ul>
+                    <li class="py"> 08:00 - Event 1 </li>
+                    <li class="py"> 12:00 - Event 2 </li>
+                    <li class="py"> 12:50 - Event 3 </li>
+                    <li class="py"> 13:30 - Event 4 </li>
+                    <li class="py"> 14:00 - Event 5 </li>
+                    <li class="py"> 17:30 - Event 6 </li>
+                </ul>
             </div>
             <div class="col-8 calendar">
-                <div class = "calendar-days-of-week">
-                    <div id="Mon" class="p text-center">Mon</div>
-                    <div id="Tue" class="p text-center">Tue</div>
-                    <div id="Wed" class="p text-center">Wed</div>
-                    <div id="Thu" class="p text-center">Thu</div>
-                    <div id="Fri" class="p text-center">Fri</div>
-                    <div id="Sat" class="p text-center">Sat</div>
-                    <div id="Sun" class="p text-center">Sun</div>
+                <div class="calendar-days-of-week">
+                    <div id="Mon" class="day-item p text-center">Mon</div>
+                    <div id="Tue" class="day-item p text-center">Tue</div>
+                    <div id="Wed" class="day-item p text-center">Wed</div>
+                    <div id="Thu" class="day-item p text-center">Thu</div>
+                    <div id="Fri" class="day-item p text-center">Fri</div>
+                    <div id="Sat" class="day-item p text-center">Sat</div>
+                    <div id="Sun" class="day-item p text-center">Sun</div>
                 </div>
                 <div class="calendar-days">
-                    <div id="calendar-item-1"  class="calendar-item text-center">30</div>
-                    <div id="calendar-item-2"  class="calendar-item text-center">31</div>
-                    <div id="calendar-item-3"  class="calendar-item text-center">1</div>
-                    <div id="calendar-item-4"  class="calendar-item text-center">2</div>
-                    <div id="calendar-item-5"  class="calendar-item text-center">3</div>
-                    <div id="calendar-item-6"  class="calendar-item text-center">4</div>
-                    <div id="calendar-item-7"  class="calendar-item text-center">5</div>
-                    <div id="calendar-item-8"  class="calendar-item text-center">6</div>
-                    <div id="calendar-item-9"  class="calendar-item text-center">7</div>
+                    <div id="calendar-item-1" class="calendar-item another-month text-center">30</div>
+                    <div id="calendar-item-2" class="calendar-item another-month text-center">31</div>
+                    <div id="calendar-item-3" class="calendar-item text-center">1</div>
+                    <div id="calendar-item-4" class="calendar-item selected-day text-center">2</div>
+                    <div id="calendar-item-5" class="calendar-item text-center">
+                        3
+                        <span class="p-absolute"> 4 </span>
+                    </div>
+                    <div id="calendar-item-6" class="calendar-item text-center">4</div>
+                    <div id="calendar-item-7" class="calendar-item text-center">
+                        5
+                        <span class="p-absolute"> 2 </span>
+                    </div>
+                    <div id="calendar-item-8" class="calendar-item text-center">6</div>
+                    <div id="calendar-item-9" class="calendar-item text-center">7</div>
                     <div id="calendar-item-10" class="calendar-item text-center">8</div>
                     <div id="calendar-item-11" class="calendar-item text-center">9</div>
                     <div id="calendar-item-12" class="calendar-item text-center">10</div>
-                    <div id="calendar-item-13" class="calendar-item text-center">11</div>
+                    <div id="calendar-item-13" class="calendar-item text-center">
+                        11
+                        <span class="p-absolute"> 6 </span>
+                    </div>
                     <div id="calendar-item-14" class="calendar-item text-center">12</div>
                     <div id="calendar-item-15" class="calendar-item text-center">13</div>
                     <div id="calendar-item-16" class="calendar-item text-center">14</div>
-                    <div id="calendar-item-17" class="calendar-item text-center">15</div>
+                    <div id="calendar-item-17" class="calendar-item text-center">
+                        15
+                        <span class="p-absolute"> 1 </span>
+                    </div>
                     <div id="calendar-item-18" class="calendar-item text-center">16</div>
                     <div id="calendar-item-19" class="calendar-item text-center">17</div>
                     <div id="calendar-item-20" class="calendar-item text-center">18</div>
                     <div id="calendar-item-21" class="calendar-item text-center">19</div>
                     <div id="calendar-item-22" class="calendar-item text-center">20</div>
-                    <div id="calendar-item-23" class="calendar-item text-center">21</div>
+                    <div id="calendar-item-23" class="calendar-item text-center">
+                        21
+                        <span class="p-absolute"> 2 </span>
+                    </div>
                     <div id="calendar-item-24" class="calendar-item text-center">22</div>
                     <div id="calendar-item-25" class="calendar-item text-center">23</div>
                     <div id="calendar-item-26" class="calendar-item text-center">24</div>
@@ -71,13 +98,14 @@
                     <div id="calendar-item-30" class="calendar-item text-center">28</div>
                     <div id="calendar-item-31" class="calendar-item text-center">29</div>
                     <div id="calendar-item-32" class="calendar-item text-center">31</div>
-                    <div id="calendar-item-33" class="calendar-item text-center">1</div>
-                    <div id="calendar-item-34" class="calendar-item text-center">2</div>
-                    <div id="calendar-item-35" class="calendar-item text-center">3</div>
+                    <div id="calendar-item-33" class="calendar-item another-month text-center">1</div>
+                    <div id="calendar-item-34" class="calendar-item another-month text-center">2</div>
+                    <div id="calendar-item-35" class="calendar-item another-month text-center">3</div>
                 </div>
             </div>
-        </header>
+            </header>
         </section>
     </div>
 </body>
+
 </html>
