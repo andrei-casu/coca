@@ -1,8 +1,8 @@
 .my-body {
-  background-color: #fff;
+  background-color: #F5F7F6;
   top: 13%;
   left: 25%;
-  font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .my-body header .header-right {
@@ -15,7 +15,7 @@
 }
 
 .my-body section .about-date {
-  background-color: lightgrey;
+  background-color: #E7EAEA;
 }
 
 .my-body section .calendar .calendar-days-of-week {
