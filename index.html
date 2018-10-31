@@ -10,37 +10,76 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <script type="text/javascript" src="./index.js"></script>
     <title>Coca Calendar</title>
 </head>
 
 <body>
     <div class="my-body container p-absolute w-50">
         <header class="row py">
-            <div class="col-4 p0 header-left">
-                <button>Preferences</button>
-                <button>Export</button>
-                <button>Import</button>
+            <div class="col-4 p0 header-left" onclick="handleHeaderLeftClick(event)">
+                <button id="preferences">Preferences</button>
+                <button id="export">Export</button>
+                <button id="import">Import</button>
             </div>
             <div class="col-8 p0 header-right">
-                <div class="current-date"> Friday, 2 November, 2018 </div>
+                <div class="current-date">
+                    <i class="far fa-calendar-alt"></i>
+                    Friday, 2 November, 2018 
+                </div>
                 <button>Month</button>
                 <button>Year</button>
             </div>
         </header>
         <section class="row">
-            <div class="col-4 about-date">
-                <h4>Friday, 2 November, 2018</h4>
-                <ul>
-                    <li class="py"> 08:00 - Event 1 </li>
-                    <li class="py"> 12:00 - Event 2 </li>
-                    <li class="py"> 12:50 - Event 3 </li>
-                    <li class="py"> 13:30 - Event 4 </li>
-                    <li class="py"> 14:00 - Event 5 </li>
-                    <li class="py"> 17:30 - Event 6 </li>
+            <div class="col-4 about-date d-block">
+                <h2 class="current-date">Friday, 2 November, 2018</h2>
+                <ul class="p0">
+                    <li class="py in-past">
+                        <div>08:00</div>
+                        <div>Event 1</div>
+                    </li>
+                    <li class="py in-past opened">
+                        <div>12:00</div>
+                        <div>CLIW</div>
+                    </li>
+                    <div class="event-details mb">
+                        Subject: Project presentation CLIW </br>
+                        Location: FII - C309
+                    </div>
+                    <li class="py">
+                        <div>12:50</div>
+                        <div>Event 3</div>
+                    </li>
+                    <li class="py">
+                        <div>13:30</div>
+                        <div>Event 4</div>
+                    </li>
+                    <li class="py">
+                        <div>14:00</div>
+                        <div>Event 5</div>
+                    </li>
+                    <li class="py">
+                        <div>17:30</div>
+                        <div>Event 6</div>
+                    </li>
                 </ul>
             </div>
+            <div class="col-4 preferences d-none">
+                preferences
+                <i onclick="closeSection()" class="fas fa-times"></i>
+            </div>
+            <div class="col-4 export d-none">
+                export
+                <i onclick="closeSection()" class="fas fa-times"></i>
+            </div>
+            <div class="col-4 import d-none">
+                import
+                <i onclick="closeSection()" class="fas fa-times"></i>
+            </div>
+
             <div class="col-8 calendar">
+                <i class="fas fa-angle-left"></i>
+                <i class="fas fa-angle-right"></i>
                 <div class="calendar-days-of-week">
                     <div id="Mon" class="day-item p text-center">Mon</div>
                     <div id="Tue" class="day-item p text-center">Tue</div>
@@ -54,7 +93,10 @@
                     <div id="calendar-item-1" class="calendar-item another-month text-center">30</div>
                     <div id="calendar-item-2" class="calendar-item another-month text-center">31</div>
                     <div id="calendar-item-3" class="calendar-item text-center">1</div>
-                    <div id="calendar-item-4" class="calendar-item selected-day text-center">2</div>
+                    <div id="calendar-item-4" class="calendar-item selected-day text-center">
+                        2
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
                     <div id="calendar-item-5" class="calendar-item text-center">
                         3
                         <span class="p-absolute"> 4 </span>
@@ -107,5 +149,6 @@
         </section>
     </div>
 </body>
+<script type="text/javascript" src="./index.js"></script>
 
 </html>

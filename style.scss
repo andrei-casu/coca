@@ -1,11 +1,15 @@
 
 
 $blue-color: #4285f4;
-$green-color: #0B8043;
+$green-color: #0B8043; 
 $red-color: #DB4437;
+$bck-color: #F5F7F6;
+$light-grey-color: #E7EAEA;
+$dark-grey-color: #adb5bd;
+
 
 .my-body{
-    background-color:#F5F7F6;
+    background-color: $bck-color;
     top: 13%;
     left: 25%;
     // font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
@@ -34,7 +38,7 @@ $red-color: #DB4437;
             font: inherit;
             cursor: pointer;
             outline: inherit;
-            background-color: #E7EAEA;
+            background-color: $light-grey-color;
             padding: 5px;
             margin: 0 2px;
             font-size: 14px;
@@ -43,22 +47,64 @@ $red-color: #DB4437;
 
             &:hover{
                 background-color: $blue-color;
-                color: #E7EAEA;
+                color: $light-grey-color;
             }
         }
     }
 
     section{
+        .about-date, .preferences, .export, .import{
+            background-color: $light-grey-color;
+        }
+
         .about-date{
-            background-color: #E7EAEA;
+
+            h2.current-date{
+                color: $green-color;
+            }
             ul{
                 list-style: none;
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    &.in-past{
+                        color: $dark-grey-color;
+                    }
+
+                    &:hover, &.opened{
+                        color: $red-color;
+                    }
+                }
+            
+                .event-details{
+                    color: $blue-color;
+                    font-size: 12px;
+                }
             }
 
         }
 
-
         .calendar{
+
+            .fas.fa-angle-left, .fas.fa-angle-right{
+                position: absolute;
+                top: calc(50% - 35px);
+                font-size: 30px;
+                color: $blue-color;
+                cursor: pointer;   
+                &:hover{
+                    color: $red-color;
+                }
+            }
+             .fas.fa-angle-right{
+                right: 0px;
+  
+            }
+            .fas.fa-angle-left{
+                left: 0px;
+            }
             .calendar-days-of-week{
                 display: grid;
                 .day-item{
@@ -109,13 +155,19 @@ $red-color: #DB4437;
                         color: #fff;
                     }
                     &.another-month{
-                        color: #adb5bd;
+                        color: $dark-grey-color;
                     }
                     &.selected-day{
                         background-color: $green-color;
                         color: #fff;
                     }
 
+                    i{
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        font-size: 14px;
+                    }
                     span{
                         color: $red-color;
                         font-size: 12px;
@@ -123,9 +175,6 @@ $red-color: #DB4437;
                         left: 25%;
                     }
                 }
-
-
-
                 #calendar-item-1{
                     grid-row: 1/2; 
                     grid-column: 1/2; 
@@ -155,7 +204,15 @@ $red-color: #DB4437;
                     grid-column: 7/8; 
                 }
             }
+        } 
+
+        .fas.fa-times{
+            color: $red-color;
+            font-size: 18px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
-            
     }
 }
