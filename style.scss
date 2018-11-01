@@ -8,10 +8,15 @@ $light-grey-color: #E7EAEA;
 $dark-grey-color: #adb5bd;
 
 
+body {
+    text-align: center;
+}
+
 .my-body{
     background-color: $bck-color;
-    top: 13%;
-    left: 25%;
+    text-align: left;
+    // top: 13%;
+    // left: 25%;
     // font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
     font-family: 'Poppins', sans-serif;
 
@@ -215,4 +220,7 @@ $dark-grey-color: #adb5bd;
             cursor: pointer;
         }
     }
+}
+
+@media only screen and (max-width: 800px) {
 }
