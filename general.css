@@ -84,6 +84,13 @@ body {
   padding-left: 15px;
 }
 
+.col-12 {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0  100%;
+          flex: 0 0  100%;
+}
+
 .col-9 {
   max-width: 75%;
   -webkit-box-flex: 0;
@@ -231,5 +238,21 @@ body {
 
 .m0 {
   margin: 0;
+}
+
+@media only screen and (max-width: 960px) {
+  .col-lg-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .col-lg-12 {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0  100%;
+            flex: 0 0  100%;
+  }
 }
 /*# sourceMappingURL=general.css.map */
