@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      
+      <h1>Coca Calendar - Application User Guide</h1>
+    </header>
+    <!--
+      XXX
+      - check refs
+      - the math example has too much maths
+      - bring back some of the old style
+      - make semantics, validation, processing sub-sections of each structural element
+      - have a section before that for general constructs
+        - explain why use RDFa
+        - explain our patterns: RDFa, roles
+      - figure captions need to get set throughout
+      - dedication? see doc-dedication
+      - syntactic constraints (prefix)
+      - needs more sthenurines
+      - examples of everything
+      - some notes on using Semantic CSS
+      - needs more RDFa in the spec itself
+    -->
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Casuneanu Andrei &amp; Timofte Andrei
+
+        </dd>
+        <dt>Bugs &amp; Feedback</dt>
+        <dd>
+          <a href="https://github.com/capsu97/coca/">Issues and PRs welcome!</a>
+        </dd>
+        
+        
+      </dl>
+    </div>
+  
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Introduction</h2>
+      <p>
+        Coca calendar is a  web widget that allows you as page administrator to insert it into your page. In this way, your web page users can have access to their Google Calendar events right on your page. The design is pleasent, and you as a page administrator can choose some parts of it: font-size and font-family, background-colors and many other things.
+      </p>
+     
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structure</h2>
+      <p>
+        Coca Calendar is just in one page built, with buttons that will change the display.
+      </p>
+      
+      <section id="hunk">
+        <!-- review? -->
+        <h3>Admininistration Elements</h3>
+        <p>
+          The header of the widget has three main buttons: Preferences, Export and Import
+        </p>
+       
+        <section id="figures">
+          <!-- review? -->
+          <h4>Preferences</h4>
+          <p>
+           When you click Preferences button, the left part of the widget will display a section where you can change your font-size, font-family, color as you like. 
+          </p>
+          <p>
+           You can also see a Google Connect button where you can change the account source for Google Calendar
+          </p>
+        </section>
+
+        <section id="figures">
+          <!-- review? -->
+          <h4>Export</h4>
+          <p>
+            When you click Export button, the left part of the widget will display a section where you can export the Google Calendar data by donwloading it.
+          <p>
+            The supported exports are in iCalendar specified format: plain-text (.ics), JSON (jCal), XML (xCal), plus HTML5 (schema.org constructions)
+          </p>
+        </section>
+
+        <section id="figures">
+          <!-- review? -->
+          <h4>Import</h4>
+          <p>
+            When you click Import button, the left part of the widget will display a section where you can import your own calendar data.
+          <p>
+            The supported imports are in iCalendar specified format: plain-text (.ics), JSON (jCal), XML (xCal), plus HTML5 (schema.org constructions)
+          </p>
+        </section>
+      </section>
+      <section id="hunk">
+        <!-- review? -->
+        <h3>User Elements</h3>
+        <p>
+          The right-side of widget always display a calendar for one month. For each day you can see in the bottom-left corner a small number in red which shows the number of events for that day. 
+        </p>
+        
+        <p>
+          By clicking any of the days, the left-section of the widget will display a list of all events for that day. If you click an event, you can see more informations about that event such as Subject, Location and Additional comments.
+        </p>
+      </section>
+    </section>
+    
+  </body>
+</html>
