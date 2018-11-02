@@ -16,13 +16,17 @@
 <body>
     <div class="my-body container">
         <header class="row py">
-            <div class="col-4 p0 header-left" onclick="handleHeaderLeftClick(event)">
+            <div class="col-12 current-date desktop-hidden">
+                <i class="far fa-calendar-alt"></i>
+                Friday, 2 November, 2018 
+            </div>
+            <div class="col-4 p0 header-left">
                 <button id="preferences">Preferences</button>
                 <button id="export">Export</button>
                 <button id="import">Import</button>
             </div>
-            <div class="col-8 p0 header-right">
-                <div class="current-date">
+            <div class="col-8 p0 header-right mobile-hidden">
+                <div class="current-date mobile-hidden">
                     <i class="far fa-calendar-alt"></i>
                     Friday, 2 November, 2018 
                 </div>
@@ -33,6 +37,7 @@
         <section class="row">
             <div class="col-4 about-date d-block">
                 <h2 class="current-date">Friday, 2 November, 2018</h2>
+                <i class="fas fa-times close-about-date"></i>
                 <ul class="p0">
                     <li class="py in-past">
                         <div>08:00</div>
@@ -66,15 +71,43 @@
             </div>
             <div class="col-4 preferences d-none">
                 preferences
-                <i onclick="closeSection()" class="fas fa-times"></i>
+                <i class="close-popup fas fa-times"></i>
+
+                <p>
+                    <img class="sign-in" src="./btn_google_signin_light_normal_web.png"/>
+                </p>
+
+                <p>
+                    Week first day: Monday
+                </p>
+
+
             </div>
             <div class="col-4 export d-none">
                 export
-                <i onclick="closeSection()" class="fas fa-times"></i>
+                <i class="close-popup fas fa-times"></i>
+
+                <p>
+                    <h3>Export your calendar</h3>
+                    <select>
+                        <option>CSV</option>
+                        <option>ICS</option>
+                    </select>
+                    <button>
+                        Export
+                    </button>
+                </p>
             </div>
             <div class="col-4 import d-none">
                 import
-                <i onclick="closeSection()" class="fas fa-times"></i>
+                <i class="close-popup fas fa-times"></i>
+
+                <p>
+                    <h3>
+                        Import you calendar
+                    </h3>
+                    <input type="file"></input>
+                </p>
             </div>
 
             <div class="col-8 calendar">

@@ -20,6 +20,27 @@ body {
     // font-family: 'Proxima Nova Soft', 'Helvetica Neue', sans-serif;
     font-family: 'Poppins', sans-serif;
 
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        background-color: $light-grey-color;
+        padding: 5px;
+        margin: 0 2px;
+        font-size: 14px;
+        color: $blue-color;
+        text-transform: uppercase;
+
+        &:hover{
+            background-color: $blue-color;
+            color: $light-grey-color;
+        }
+    }
+
     header{
         .header-left{
             display: flex;
@@ -33,194 +54,225 @@ body {
         .current-date{
             color: $green-color;
             font-weight: bold;
+            text-align: center;
         }
 
-        button{
-            background: none;
-            color: inherit;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            outline: inherit;
-            background-color: $light-grey-color;
-            padding: 5px;
-            margin: 0 2px;
-            font-size: 14px;
-            color: $blue-color;
-            text-transform: uppercase;
-
-            &:hover{
-                background-color: $blue-color;
-                color: $light-grey-color;
-            }
-        }
+        
     }
 
-    section{
-        .about-date, .preferences, .export, .import{
-            background-color: $light-grey-color;
+    .about-date, .preferences, .export, .import{
+        background-color: $light-grey-color;
+
+    }
+
+    .sign-in {
+        cursor: pointer;
+    }
+    .sign-in:hover {
+        opacity: 0.7;
+    }
+
+    .about-date{
+
+        .close-about-date {
+            display: none;
         }
 
-        .about-date{
-
-            h2.current-date{
-                color: $green-color;
-            }
-            ul{
-                list-style: none;
-                li{
-                    display: flex;
-                    justify-content: space-between;
-                    cursor: pointer;
-
-                    &.in-past{
-                        color: $dark-grey-color;
-                    }
-
-                    &:hover, &.opened{
-                        color: $red-color;
-                    }
-                }
-            
-                .event-details{
-                    color: $blue-color;
-                    font-size: 12px;
-                }
-            }
-
+        h2.current-date{
+            color: $green-color;
         }
+        ul{
+            list-style: none;
+            li{
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
 
-        .calendar{
+                &.in-past{
+                    color: $dark-grey-color;
+                }
 
-            .fas.fa-angle-left, .fas.fa-angle-right{
-                position: absolute;
-                top: calc(50% - 35px);
-                font-size: 30px;
-                color: $blue-color;
-                cursor: pointer;   
-                &:hover{
+                &:hover, &.opened{
                     color: $red-color;
                 }
             }
-             .fas.fa-angle-right{
-                right: 0px;
-  
+        
+            .event-details{
+                color: $blue-color;
+                font-size: 12px;
             }
-            .fas.fa-angle-left{
-                left: 0px;
-            }
-            .calendar-days-of-week{
-                display: grid;
-                .day-item{
-                    font-size: 16px;
-                    cursor: default;
-                }
+        }
 
-                #Mon{
-                    grid-row: 1/2; 
-                    grid-column: 1/2; 
-                }
-                #Tue{
-                    grid-row: 1/2; 
-                    grid-column: 2/3; 
-                }
-                #Wed{
-                    grid-row: 1/2; 
-                    grid-column: 3/4; 
-                }
-                #Thu{
-                    grid-row: 1/2; 
-                    grid-column: 4/5; 
-                }
-                #Fri{
-                    grid-row: 1/2; 
-                    grid-column: 5/6; 
-                }
-                #Sat{
-                    grid-row: 1/2; 
-                    grid-column: 6/7; 
-                }
-                #Sun{
-                    grid-row: 1/2; 
-                    grid-column: 7/8; 
-                }
-            }
+    }
 
-            .calendar-days{
-                display: grid;
+    .calendar{
 
-                .calendar-item{
-                    cursor: pointer;
-                    padding: 1rem;
-                    font-size: 22px;
-                    position: relative;
-                    &:hover{
-                        background-color: $blue-color;
-                        color: #fff;
-                    }
-                    &.another-month{
-                        color: $dark-grey-color;
-                    }
-                    &.selected-day{
-                        background-color: $green-color;
-                        color: #fff;
-                    }
-
-                    i{
-                        position: absolute;
-                        top: 5px;
-                        right: 5px;
-                        font-size: 14px;
-                    }
-                    span{
-                        color: $red-color;
-                        font-size: 12px;
-                        bottom: 1px;
-                        left: 25%;
-                    }
-                }
-                #calendar-item-1{
-                    grid-row: 1/2; 
-                    grid-column: 1/2; 
-                }
-                #calendar-item-2{
-                    grid-row: 1/2; 
-                    grid-column: 2/3; 
-                }
-                #calendar-item-3{
-                    grid-row: 1/2; 
-                    grid-column: 3/4; 
-                }
-                #calendar-item-4{
-                    grid-row: 1/2; 
-                    grid-column: 4/5; 
-                }
-                #calendar-item-5{
-                    grid-row: 1/2; 
-                    grid-column: 5/6; 
-                }
-                #calendar-item-6{
-                    grid-row: 1/2; 
-                    grid-column: 6/7; 
-                }
-                #calendar-item-7{
-                    grid-row: 1/2; 
-                    grid-column: 7/8; 
-                }
-            }
-        } 
-
-        .fas.fa-times{
-            color: $red-color;
-            font-size: 18px;
+        .fas.fa-angle-left, .fas.fa-angle-right{
             position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
+            top: calc(50% - 35px);
+            font-size: 30px;
+            color: $blue-color;
+            cursor: pointer;   
+            &:hover{
+                color: $red-color;
+            }
+        }
+            .fas.fa-angle-right{
+            right: 0px;
+
+        }
+        .fas.fa-angle-left{
+            left: 0px;
+        }
+        .calendar-days-of-week{
+            display: grid;
+            .day-item{
+                font-size: 16px;
+                cursor: default;
+            }
+
+            #Mon{
+                grid-row: 1/2; 
+                grid-column: 1/2; 
+            }
+            #Tue{
+                grid-row: 1/2; 
+                grid-column: 2/3; 
+            }
+            #Wed{
+                grid-row: 1/2; 
+                grid-column: 3/4; 
+            }
+            #Thu{
+                grid-row: 1/2; 
+                grid-column: 4/5; 
+            }
+            #Fri{
+                grid-row: 1/2; 
+                grid-column: 5/6; 
+            }
+            #Sat{
+                grid-row: 1/2; 
+                grid-column: 6/7; 
+            }
+            #Sun{
+                grid-row: 1/2; 
+                grid-column: 7/8; 
+            }
+        }
+
+        .calendar-days{
+            display: grid;
+
+            .calendar-item{
+                cursor: pointer;
+                padding: 2rem 1rem;
+                font-size: 22px;
+                position: relative;
+                &:hover{
+                    background-color: $blue-color;
+                    color: #fff;
+                }
+                &.another-month{
+                    color: $dark-grey-color;
+                }
+                &.selected-day{
+                    background-color: $green-color;
+                    color: #fff;
+                }
+
+                i{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    font-size: 14px;
+                }
+                span{
+                    color: $red-color;
+                    font-size: 12px;
+                    bottom: 1px;
+                    left: 25%;
+                }
+            }
+            #calendar-item-1{
+                grid-row: 1/2; 
+                grid-column: 1/2; 
+            }
+            #calendar-item-2{
+                grid-row: 1/2; 
+                grid-column: 2/3; 
+            }
+            #calendar-item-3{
+                grid-row: 1/2; 
+                grid-column: 3/4; 
+            }
+            #calendar-item-4{
+                grid-row: 1/2; 
+                grid-column: 4/5; 
+            }
+            #calendar-item-5{
+                grid-row: 1/2; 
+                grid-column: 5/6; 
+            }
+            #calendar-item-6{
+                grid-row: 1/2; 
+                grid-column: 6/7; 
+            }
+            #calendar-item-7{
+                grid-row: 1/2; 
+                grid-column: 7/8; 
+            }
+        }
+    } 
+
+    .fas.fa-times{
+        color: $red-color;
+        font-size: 18px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    @media only screen and (min-width: 801px) {
+        .desktop-hidden {
+            display: none !important;
         }
     }
-}
 
-@media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 800px) {
+        .mobile-hidden {
+            display: none !important;
+        }
+
+        .calendar {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .about-date, .export, .import, .preferences {
+            max-width: 100%;
+            flex: 0 0 100%;
+
+            .close-about-date {
+                display: block;
+            }
+            // display: none;
+        }
+    }
+
+    @media only screen and (max-width: 470px) {
+        .calendar {
+            .calendar-days-of-week {
+                .p {
+                    padding: 10px 0px;
+                }
+            }
+
+            .calendar-days .calendar-item {
+                padding: 2rem 0rem;
+            }
+        }
+    }
+
 }

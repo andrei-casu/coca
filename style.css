@@ -1,33 +1,13 @@
+body {
+  text-align: center;
+}
+
 .my-body {
   background-color: #F5F7F6;
-  top: 13%;
-  left: 25%;
-  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
 }
-
-.my-body header .header-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.my-body header .header-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.my-body header .current-date {
-  color: #0B8043;
-  font-weight: bold;
-}
-
-.my-body header button {
+.my-body button {
   background: none;
   color: inherit;
   border: none;
@@ -42,244 +22,168 @@
   color: #4285f4;
   text-transform: uppercase;
 }
-
-.my-body header button:hover {
+.my-body button:hover {
   background-color: #4285f4;
   color: #E7EAEA;
 }
-
-.my-body section .about-date, .my-body section .preferences, .my-body section .export, .my-body section .import {
+.my-body header .header-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.my-body header .header-right {
+  display: flex;
+  justify-content: space-around;
+}
+.my-body header .current-date {
+  color: #0B8043;
+  font-weight: bold;
+  text-align: center;
+}
+.my-body .about-date, .my-body .preferences, .my-body .export, .my-body .import {
   background-color: #E7EAEA;
 }
-
-.my-body section .about-date h2.current-date {
-  color: #0B8043;
-}
-
-.my-body section .about-date ul {
-  list-style: none;
-}
-
-.my-body section .about-date ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.my-body .sign-in {
   cursor: pointer;
 }
-
-.my-body section .about-date ul li.in-past {
+.my-body .sign-in:hover {
+  opacity: 0.7;
+}
+.my-body .about-date .close-about-date {
+  display: none;
+}
+.my-body .about-date h2.current-date {
+  color: #0B8043;
+}
+.my-body .about-date ul {
+  list-style: none;
+}
+.my-body .about-date ul li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.my-body .about-date ul li.in-past {
   color: #adb5bd;
 }
-
-.my-body section .about-date ul li:hover, .my-body section .about-date ul li.opened {
+.my-body .about-date ul li:hover, .my-body .about-date ul li.opened {
   color: #DB4437;
 }
-
-.my-body section .about-date ul .event-details {
+.my-body .about-date ul .event-details {
   color: #4285f4;
   font-size: 12px;
 }
-
-.my-body section .calendar .fas.fa-angle-left, .my-body section .calendar .fas.fa-angle-right {
+.my-body .calendar .fas.fa-angle-left, .my-body .calendar .fas.fa-angle-right {
   position: absolute;
   top: calc(50% - 35px);
   font-size: 30px;
   color: #4285f4;
   cursor: pointer;
 }
-
-.my-body section .calendar .fas.fa-angle-left:hover, .my-body section .calendar .fas.fa-angle-right:hover {
+.my-body .calendar .fas.fa-angle-left:hover, .my-body .calendar .fas.fa-angle-right:hover {
   color: #DB4437;
 }
-
-.my-body section .calendar .fas.fa-angle-right {
+.my-body .calendar .fas.fa-angle-right {
   right: 0px;
 }
-
-.my-body section .calendar .fas.fa-angle-left {
+.my-body .calendar .fas.fa-angle-left {
   left: 0px;
 }
-
-.my-body section .calendar .calendar-days-of-week {
-  display: -ms-grid;
+.my-body .calendar .calendar-days-of-week {
   display: grid;
 }
-
-.my-body section .calendar .calendar-days-of-week .day-item {
+.my-body .calendar .calendar-days-of-week .day-item {
   font-size: 16px;
   cursor: default;
 }
-
-.my-body section .calendar .calendar-days-of-week #Mon {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Mon {
   grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
-
-.my-body section .calendar .calendar-days-of-week #Tue {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Tue {
   grid-row: 1/2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
-
-.my-body section .calendar .calendar-days-of-week #Wed {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Wed {
   grid-row: 1/2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
-
-.my-body section .calendar .calendar-days-of-week #Thu {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Thu {
   grid-row: 1/2;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
-
-.my-body section .calendar .calendar-days-of-week #Fri {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Fri {
   grid-row: 1/2;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
   grid-column: 5/6;
 }
-
-.my-body section .calendar .calendar-days-of-week #Sat {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Sat {
   grid-row: 1/2;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 1;
   grid-column: 6/7;
 }
-
-.my-body section .calendar .calendar-days-of-week #Sun {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days-of-week #Sun {
   grid-row: 1/2;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 1;
   grid-column: 7/8;
 }
-
-.my-body section .calendar .calendar-days {
-  display: -ms-grid;
+.my-body .calendar .calendar-days {
   display: grid;
 }
-
-.my-body section .calendar .calendar-days .calendar-item {
+.my-body .calendar .calendar-days .calendar-item {
   cursor: pointer;
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-size: 22px;
   position: relative;
 }
-
-.my-body section .calendar .calendar-days .calendar-item:hover {
+.my-body .calendar .calendar-days .calendar-item:hover {
   background-color: #4285f4;
   color: #fff;
 }
-
-.my-body section .calendar .calendar-days .calendar-item.another-month {
+.my-body .calendar .calendar-days .calendar-item.another-month {
   color: #adb5bd;
 }
-
-.my-body section .calendar .calendar-days .calendar-item.selected-day {
+.my-body .calendar .calendar-days .calendar-item.selected-day {
   background-color: #0B8043;
   color: #fff;
 }
-
-.my-body section .calendar .calendar-days .calendar-item i {
+.my-body .calendar .calendar-days .calendar-item i {
   position: absolute;
   top: 5px;
   right: 5px;
   font-size: 14px;
 }
-
-.my-body section .calendar .calendar-days .calendar-item span {
+.my-body .calendar .calendar-days .calendar-item span {
   color: #DB4437;
   font-size: 12px;
   bottom: 1px;
   left: 25%;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-1 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-1 {
   grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-2 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-2 {
   grid-row: 1/2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-3 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-3 {
   grid-row: 1/2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-4 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-4 {
   grid-row: 1/2;
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-5 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-5 {
   grid-row: 1/2;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 1;
   grid-column: 5/6;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-6 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-6 {
   grid-row: 1/2;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 1;
   grid-column: 6/7;
 }
-
-.my-body section .calendar .calendar-days #calendar-item-7 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
+.my-body .calendar .calendar-days #calendar-item-7 {
   grid-row: 1/2;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 1;
   grid-column: 7/8;
 }
-
-.my-body section .fas.fa-times {
+.my-body .fas.fa-times {
   color: #DB4437;
   font-size: 18px;
   position: absolute;
@@ -287,4 +191,32 @@
   right: 10px;
   cursor: pointer;
 }
-/*# sourceMappingURL=style.css.map */
+@media only screen and (min-width: 801px) {
+  .my-body .desktop-hidden {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .my-body .mobile-hidden {
+    display: none !important;
+  }
+  .my-body .calendar {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .my-body .about-date, .my-body .export, .my-body .import, .my-body .preferences {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .my-body .about-date .close-about-date, .my-body .export .close-about-date, .my-body .import .close-about-date, .my-body .preferences .close-about-date {
+    display: block;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .my-body .calendar .calendar-days-of-week .p {
+    padding: 10px 0px;
+  }
+  .my-body .calendar .calendar-days .calendar-item {
+    padding: 2rem 0rem;
+  }
+}
