@@ -42,7 +42,7 @@ body#landing-page{
     }
 
     section.landing-page{
-        // margin-top: 200px;
+        margin-top: 100px;
         display: flex;
         align-items: center;
         height: 100vh;
@@ -79,7 +79,7 @@ body#landing-page{
     section.how-to-install{
         background-color: $red-color;
         padding: 0 auto !important;
-        height: 30vh;
+        height: 40vh;
         h1{
             color: #fff;
             font-size: 40px;

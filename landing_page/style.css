@@ -47,6 +47,7 @@ body#landing-page header.landing-page .menu div:hover {
 }
 
 body#landing-page section.landing-page {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +92,7 @@ body#landing-page section.landing-page .about ul li div::first-letter {
 body#landing-page section.how-to-install {
   background-color: #ff1e5c;
   padding: 0 auto !important;
-  height: 30vh;
+  height: 40vh;
 }
 
 body#landing-page section.how-to-install h1 {
