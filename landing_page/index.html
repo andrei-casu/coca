@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../general.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Coca Landing Page</title>
+</head>
+
+<body id="landing-page">
+    <header class="row m0 landing-page">
+        <div class="col-4 title">Coca Calendar</div>
+        <div class="menu col-8 d-flex">
+            <div> About </div>
+            <div> How to use it </div>
+            <div> Contact </div>
+        </div>
+    </header>
+    <section class="row landing-page">
+        <div class="about col-6 col-lg-12">
+            <h1>About product</h1>
+            <ul>
+                <li>
+                    <!-- <i class="fas fa-arrow-right"></i> -->
+                    <div>Cool design</div>
+                </li>
+                <li>
+                    <!-- <i class="fas fa-arrow-right"></i> -->
+                    <div>Open to design change, as you like</div>
+                </li>
+                <li>
+                    <!-- <i class="fas fa-arrow-right"></i> -->
+                    <div>Check your calendar on your own page</div>
+                </li>
+                <li>
+                    <!-- <i class="fas fa-arrow-right"></i> -->
+                    <div>Awesome export or import data from other sources</div>
+                </li>
+            </ul>
+        </div>
+        <div class="demo col-6 col-lg-12">
+            <div class="my-body container">
+                <header class="row py">
+                    <div class="col-4 p0 header-left" onclick="handleHeaderLeftClick(event)">
+                        <button id="preferences">Preferences</button>
+                        <button id="export">Export</button>
+                        <button id="import">Import</button>
+                    </div>
+                    <div class="col-8 p0 header-right">
+                        <div class="current-date">
+                            <i class="far fa-calendar-alt"></i>
+                            Friday, 2 November, 2018
+                        </div>
+                        <button>Month</button>
+                        <button>Year</button>
+                    </div>
+                </header>
+                <section class="row">
+                    <div class="col-4 about-date d-block">
+                        <h2 class="current-date">Friday, 2 November, 2018</h2>
+                        <ul class="p0">
+                            <li class="py in-past">
+                                <div>08:00</div>
+                                <div>Event 1</div>
+                            </li>
+                            <li class="py in-past opened">
+                                <div>12:00</div>
+                                <div>CLIW</div>
+                            </li>
+                            <div class="event-details mb">
+                                Subject: Project presentation CLIW </br>
+                                Location: FII - C309
+                            </div>
+                            <li class="py">
+                                <div>12:50</div>
+                                <div>Event 3</div>
+                            </li>
+                            <li class="py">
+                                <div>13:30</div>
+                                <div>Event 4</div>
+                            </li>
+                            <li class="py">
+                                <div>14:00</div>
+                                <div>Event 5</div>
+                            </li>
+                            <li class="py">
+                                <div>17:30</div>
+                                <div>Event 6</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 preferences d-none">
+                        preferences
+                        <i onclick="closeSection()" class="fas fa-times"></i>
+                    </div>
+                    <div class="col-4 export d-none">
+                        export
+                        <i onclick="closeSection()" class="fas fa-times"></i>
+                    </div>
+                    <div class="col-4 import d-none">
+                        import
+                        <i onclick="closeSection()" class="fas fa-times"></i>
+                    </div>
+
+                    <div class="col-8 calendar">
+                        <i class="fas fa-angle-left"></i>
+                        <i class="fas fa-angle-right"></i>
+                        <div class="calendar-days-of-week">
+                            <div id="Mon" class="day-item p text-center">Mon</div>
+                            <div id="Tue" class="day-item p text-center">Tue</div>
+                            <div id="Wed" class="day-item p text-center">Wed</div>
+                            <div id="Thu" class="day-item p text-center">Thu</div>
+                            <div id="Fri" class="day-item p text-center">Fri</div>
+                            <div id="Sat" class="day-item p text-center">Sat</div>
+                            <div id="Sun" class="day-item p text-center">Sun</div>
+                        </div>
+                        <div class="calendar-days">
+                            <div id="calendar-item-1" class="calendar-item another-month text-center">30</div>
+                            <div id="calendar-item-2" class="calendar-item another-month text-center">31</div>
+                            <div id="calendar-item-3" class="calendar-item text-center">1</div>
+                            <div id="calendar-item-4" class="calendar-item selected-day text-center">
+                                2
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <div id="calendar-item-5" class="calendar-item text-center">
+                                3
+                                <span class="p-absolute"> 4 </span>
+                            </div>
+                            <div id="calendar-item-6" class="calendar-item text-center">4</div>
+                            <div id="calendar-item-7" class="calendar-item text-center">
+                                5
+                                <span class="p-absolute"> 2 </span>
+                            </div>
+                            <div id="calendar-item-8" class="calendar-item text-center">6</div>
+                            <div id="calendar-item-9" class="calendar-item text-center">7</div>
+                            <div id="calendar-item-10" class="calendar-item text-center">8</div>
+                            <div id="calendar-item-11" class="calendar-item text-center">9</div>
+                            <div id="calendar-item-12" class="calendar-item text-center">10</div>
+                            <div id="calendar-item-13" class="calendar-item text-center">
+                                11
+                                <span class="p-absolute"> 6 </span>
+                            </div>
+                            <div id="calendar-item-14" class="calendar-item text-center">12</div>
+                            <div id="calendar-item-15" class="calendar-item text-center">13</div>
+                            <div id="calendar-item-16" class="calendar-item text-center">14</div>
+                            <div id="calendar-item-17" class="calendar-item text-center">
+                                15
+                                <span class="p-absolute"> 1 </span>
+                            </div>
+                            <div id="calendar-item-18" class="calendar-item text-center">16</div>
+                            <div id="calendar-item-19" class="calendar-item text-center">17</div>
+                            <div id="calendar-item-20" class="calendar-item text-center">18</div>
+                            <div id="calendar-item-21" class="calendar-item text-center">19</div>
+                            <div id="calendar-item-22" class="calendar-item text-center">20</div>
+                            <div id="calendar-item-23" class="calendar-item text-center">
+                                21
+                                <span class="p-absolute"> 2 </span>
+                            </div>
+                            <div id="calendar-item-24" class="calendar-item text-center">22</div>
+                            <div id="calendar-item-25" class="calendar-item text-center">23</div>
+                            <div id="calendar-item-26" class="calendar-item text-center">24</div>
+                            <div id="calendar-item-27" class="calendar-item text-center">25</div>
+                            <div id="calendar-item-28" class="calendar-item text-center">26</div>
+                            <div id="calendar-item-29" class="calendar-item text-center">27</div>
+                            <div id="calendar-item-30" class="calendar-item text-center">28</div>
+                            <div id="calendar-item-31" class="calendar-item text-center">29</div>
+                            <div id="calendar-item-32" class="calendar-item text-center">31</div>
+                            <div id="calendar-item-33" class="calendar-item another-month text-center">1</div>
+                            <div id="calendar-item-34" class="calendar-item another-month text-center">2</div>
+                            <div id="calendar-item-35" class="calendar-item another-month text-center">3</div>
+                        </div>
+                    </div>
+                    </header>
+                </section>
+            </div>
+        </div>
+    </section>
+    <section class="row how-to-install text-center">
+        <div class="col-12 p">
+            <h1>How to use it</h1>
+            <h3>Just insert this code into your site</h3>
+            <code> 
+                < script type="text/javascript" src="coca-calendar.com/loremipsumdoloresblabla"> < /script >
+            </code>
+        </div>
+    </section>
+
+    <footer class="row contact">
+        <div class="col-12 p">
+            <div class="contact-info"> 
+                Contact: 
+                <i class="fab fa-github-square"></i>
+                <a href="https://github.com/capsu97/coca">https://github.com/capsu97/coca</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="../index.js"></script>
+
+</html>

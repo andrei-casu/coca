@@ -1,5 +1,7 @@
-body {
-  text-align: center;
+.my-body {
+  background-color: #F5F7F6;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 .my-body {

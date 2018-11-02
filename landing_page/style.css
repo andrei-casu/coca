@@ -1,0 +1,178 @@
+body#landing-page {
+  margin: 0;
+  width: 100vw;
+  background-image: url("./bckg.jpg");
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body#landing-page header.landing-page {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+body#landing-page header.landing-page .title {
+  font-size: 1.875rem;
+  padding: 1.875rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body#landing-page header.landing-page .menu {
+  font-size: 1.25rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body#landing-page header.landing-page .menu div {
+  margin-right: 10px;
+  padding: 1.875rem;
+  cursor: pointer;
+  line-height: 45px;
+}
+
+body#landing-page header.landing-page .menu div:hover {
+  color: #ff1e5c;
+}
+
+body#landing-page section.landing-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 1.875rem;
+}
+
+body#landing-page section.landing-page .about {
+  padding-left: 100px !important;
+}
+
+body#landing-page section.landing-page .about h1 {
+  color: #ff1e5c;
+  font-size: 40px;
+}
+
+body#landing-page section.landing-page .about ul {
+  list-style: none;
+}
+
+body#landing-page section.landing-page .about ul li {
+  font-size: 25px;
+  color: #fff;
+}
+
+body#landing-page section.landing-page .about ul li i {
+  margin-right: 1.25rem;
+}
+
+body#landing-page section.landing-page .about ul li div {
+  display: inline-block;
+}
+
+body#landing-page section.landing-page .about ul li div::first-letter {
+  color: #ff1e5c;
+  font-size: 35px;
+}
+
+body#landing-page section.how-to-install {
+  background-color: #ff1e5c;
+  padding: 0 auto !important;
+  height: 30vh;
+}
+
+body#landing-page section.how-to-install h1 {
+  color: #fff;
+  font-size: 40px;
+}
+
+body#landing-page section.how-to-install code {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+body#landing-page footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1.875rem;
+  text-align: center;
+}
+
+body#landing-page footer.contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body#landing-page footer.contact .contact-info:hover {
+  color: #ff1e5c;
+}
+
+body#landing-page footer.contact .contact-info i {
+  font-size: 35px;
+  margin: 0 1.25rem;
+}
+
+body#landing-page footer.contact .contact-info a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+
+@media only screen and (max-width: 960px) {
+  body#landing-page header.landing-page .title {
+    font-size: 1.3rem;
+    padding: 1.3rem;
+  }
+  body#landing-page section.landing-page {
+    margin: 100px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body#landing-page header.landing-page {
+    display: none;
+  }
+  body#landing-page section.landing-page .about {
+    padding: 0 !important;
+  }
+  body#landing-page section.how-to-install {
+    background-color: #ff1e5c;
+    padding: 0 auto !important;
+    height: 40vh;
+  }
+  body#landing-page section.how-to-install h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  body#landing-page section.how-to-install code {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+  }
+  body#landing-page .my-body.container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

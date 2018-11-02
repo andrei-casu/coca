@@ -1,0 +1,169 @@
+
+$red-color: #ff1e5c;
+
+body#landing-page{
+    margin: 0;
+    width: 100vw;
+    background-image: url('./bckg.jpg');
+    // background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+    header.landing-page{
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        .title{
+            font-size: 1.875rem;
+            padding: 1.875rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+        .menu{
+            font-size: 1.25rem;
+            justify-content: flex-end;
+
+            div{
+                margin-right: 10px;
+                padding: 1.875rem;
+                cursor: pointer;
+                line-height: 45px;
+
+                &:hover{
+                    color: $red-color;
+                }
+            }
+        }
+    }
+
+    section.landing-page{
+        // margin-top: 200px;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 1.875rem;
+        .about{
+            padding-left: 100px !important;
+            h1{
+                color: $red-color;
+                font-size: 40px;
+            }
+
+            ul{
+                list-style: none;
+                li{
+                    font-size: 25px;
+                    color: #fff;
+                   
+
+                    i{
+                        margin-right: 1.25rem;
+                    }
+                    div{
+                        display: inline-block;
+                    }
+                    div::first-letter{
+                        color: $red-color;
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.how-to-install{
+        background-color: $red-color;
+        padding: 0 auto !important;
+        height: 30vh;
+        h1{
+            color: #fff;
+            font-size: 40px;
+        }
+
+        code{
+            margin-top: 10px;
+            background-color: #fff;
+            padding: 10px;
+        }
+    }
+    footer{
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 1.875rem;
+        text-align: center;
+        &.contact{
+
+            .contact-info{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    color: $red-color;
+                }
+                i{
+                    font-size: 35px;
+                    margin: 0 1.25rem;
+                }
+                a{
+                    color: inherit; /* blue colors for links too */
+                    text-decoration: inherit; /* no underline */
+                   
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    body#landing-page{
+        header.landing-page{
+            .title{
+                font-size: 1.3rem;
+                padding: 1.3rem;
+            }   
+        }
+
+        section.landing-page{
+            margin: 100px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body#landing-page{
+        header.landing-page{
+            display: none;
+        }
+        section.landing-page{
+            .about{
+                padding: 0 !important;
+            }
+        }
+
+        section.how-to-install{
+            background-color: $red-color;
+            padding: 0 auto !important;
+            height: 40vh;
+            h1{
+                color: #fff;
+                font-size: 30px;
+            }
+    
+            code{
+                margin-top: 10px;
+                background-color: #fff;
+                padding: 10px;
+            }
+        }
+       .my-body.container{
+           display: none;
+       }
+        
+    }
+}
